@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ipay</groupId>
+	<artifactId>upms</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<modules>
+		<module>app/biz/biz-service</module>
+        <module>app/common/common-dal</module>
+		<module>sofa-start</module>
+		<module>app/core/core-service</module>
+		<module>app/common/common-facade</module>
+		<module>app/biz/biz-deamon</module>
+        <module>app/common/common-util</module>
+    </modules>
+	<packaging>pom</packaging>
+
+	<name>upms</name>
+	<description>ipay upms project for Spring Boot</description>
+
+	<parent>
+		<groupId>com.alipay.sofa</groupId>
+		<artifactId>sofaboot-dependencies</artifactId>
+		<version>2.4.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencyManagement>
+	<dependencies>
+
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>isle-sofa-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+		<groupId>com.alipay.sofa</groupId>
+		<artifactId>runtime-sofa-boot-starter</artifactId>
+	   </dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>common-facade</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>common-util</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>common-dal</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>biz-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>biz-deamon</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>core-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ipay</groupId>
+			<artifactId>sofa-start</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+	</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
